@@ -5,18 +5,23 @@
 
 using namespace std;
 
-void wyswietl(UstawieniaSymulacji & UST){
-    cout << "Znak glon: " << UST.znakGlon << " zycie glon MIN: " << UST.glonZycieMin << " zycie glon MAX: " << UST.glonZycieMax << endl;
-}
-
 int main(){
-    UstawieniaSymulacji& UST1 = UstawieniaSymulacji::pobierzUstawienia();   
-    UstawieniaSymulacji& UST2 = UstawieniaSymulacji::pobierzUstawienia();
-    UstawieniaSymulacji& UST3 = UstawieniaSymulacji::pobierzUstawienia();
-
-    cout << "Pobranie danych:\n";
-    cout << "UST1: "; wyswietl(UST1);
-    cout << "UST2: "; wyswietl(UST2);
-    cout << "UST3: "; wyswietl(UST3);
+    for(int i=0; i<10; i++){
+        cout << GEN::losujOdZeraDo(5) << " ";
+    }
+    cout << "\n";
+    for(int i=0; i<10; i++){
+        cout << GEN::losujOdZeraDo(10) << " ";
+    }
+    cout << "\n";
+    for(int i=0; i<10; i++){
+        cout << GEN::losujPomiedzy(-2L, 2L) << " ";
+    }
+    cout << "\n";   
+    unsigned short mini = 20, maxi = 44;
+    for(int i=0; i<10; i++){
+        cout << GEN::losujPomiedzy(mini, maxi) << " ";
+    }
+    cout << "\n";
     return 0;
 }
