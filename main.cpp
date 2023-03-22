@@ -1,35 +1,22 @@
 #include <iostream>
+#include "ustawienia.h"
 #include "Klasy/Organizm/Organizm.h"
 #include "Klasy/GeneratorLosowy/GeneratorLosowy.h"
 
 using namespace std;
 
-void drukujOrganizm(const Organizm & o)
-{
-    cout << "\nlicznikZycia: " << o.stanLicznikaZycia() << "\nlicznikPosilkow: " << o.stanLicznikPosilkow();
-    cout << "\nlimitPosilkow: " << o.limitPosilkow << "\nkosztPotomka: " << o.kosztPotomka;
-    cout << "\ngłodny: " << o.glodny() << " paczkujacy: " << o.paczkujacy() << endl << endl;
+void wyswietl(UstawieniaSymulacji & UST){
+    cout << "Znak glon: " << UST.znakGlon << " zycie glon MIN: " << UST.glonZycieMin << " zycie glon MAX: " << UST.glonZycieMax << endl;
 }
 
 int main(){
+    UstawieniaSymulacji& UST1 = UstawieniaSymulacji::pobierzUstawienia();   
+    UstawieniaSymulacji& UST2 = UstawieniaSymulacji::pobierzUstawienia();
+    UstawieniaSymulacji& UST3 = UstawieniaSymulacji::pobierzUstawienia();
 
-    Organizm organizm(8,3,2);
-
-    cout << "Stan początkowy:\n";
-    drukujOrganizm(organizm);
-    for(int i=0; i<11; i++){
-        organizm.krokSymulacji();
-
-        if(organizm.paczkujacy()){
-            organizm.potomek();
-            cout << "---> potomek\n";
-        }
-        else{
-            organizm.posilek();
-        }
-        
-        cout << "Po kroku symulacji: " << i << endl;
-        drukujOrganizm(organizm);
-    }
+    cout << "Pobranie danych:\n";
+    cout << "UST1: "; wyswietl(UST1);
+    cout << "UST2: "; wyswietl(UST2);
+    cout << "UST3: "; wyswietl(UST3);
     return 0;
 }

@@ -49,6 +49,7 @@ class UstawieniaSymulacji{
             static UstawieniaSymulacji ustawienia;
             return ustawienia;
         }
+        //ustawienia symulacji są singletonem
     private:
         UstawieniaSymulacji(){}
         UstawieniaSymulacji(UstawieniaSymulacji&);
