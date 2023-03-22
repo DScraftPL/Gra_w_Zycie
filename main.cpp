@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Klasy/Organizm/Organizm.h"
+#include "Klasy/GeneratorLosowy/GeneratorLosowy.h"
 
 using namespace std;
 
