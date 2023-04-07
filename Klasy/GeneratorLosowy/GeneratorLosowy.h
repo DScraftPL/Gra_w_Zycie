@@ -1,3 +1,6 @@
+#ifndef GENERATORLOSOWY_H
+#define GENERATORLOSOWY_H
+
 #include <iostream>
 #include <random>
 
@@ -13,3 +16,5 @@ typedef class GeneratorLosowy
         static int losujOdZeraDo(int max);
 
 } GEN;
+
+#endif

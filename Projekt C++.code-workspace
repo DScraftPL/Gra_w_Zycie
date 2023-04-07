@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../C++/Podstawy Algorytmów"
+		},
+		{
+			"path": "../C++/Labolatoria C++"
+		},
+		{
+			"path": "../vending_machine"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp"
+		}
+	}
+}

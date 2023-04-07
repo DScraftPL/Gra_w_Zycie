@@ -1,3 +1,6 @@
+#ifndef USTAWIENIA_H
+#define USTAWIENIA_H
+
 enum RodzajMieszkanca{
     GLON, GRZYB, BAKTERIA, PUSTKA, SCIANA, TRUP, NIEZNANE 
 };
@@ -54,3 +57,5 @@ class UstawieniaSymulacji{
         UstawieniaSymulacji(){}
         UstawieniaSymulacji(UstawieniaSymulacji&);
 };
+
+#endif

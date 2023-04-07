@@ -1,3 +1,6 @@
+#ifndef ORGANIZM_H
+#define ORGANIZM_H
+
 #include <iostream>
 
 class Organizm
@@ -39,3 +42,5 @@ class Organizm
 
         void krokSymulacji();
 };
+
+#endif
